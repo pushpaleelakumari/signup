@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Signup form</title>
+    </head>
+
+    <body>
+        <section class="p-5 m-5">
+            <form action="" novalidate autocomplete="off" onsubmit={handleRefresh(event)}>
+                <div class="row">
+                    <div class="mb-3 col-md-7">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="Example@gmail.com" name="email" id="email" class="form-control">
+                        <div id="error-mail" class="text-danger d-none">Make sure email is more than 3 characters and
+                            has @ and a .</div>
+                    </div>
+                    <div class="mb-3 col-md-7">
+                        <label for="email">Password</label>
+                        <input type="password" placeholder="Your Password" name="password" id="password"
+                            class="form-control">
+                        <div id="password-error" class="text-danger d-none">Make sure password is more than 8 characters
+                            .</div>
+                    </div>
+                    <div class="text-success d-none" id="good-to-go">
+                        All good to go
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-dark px-5" id="submit" onclick={handleSubmit()}>Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
